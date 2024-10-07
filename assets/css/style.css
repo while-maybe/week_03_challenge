@@ -5,6 +5,8 @@
 
   --bs-tertiary-bg-rgb: 200, 188, 199;
   /* --bs-tertiary-bg: #c8bcc7; */
+
+  --bs-border-color: #4F93D7;
 }
 
 .body {
