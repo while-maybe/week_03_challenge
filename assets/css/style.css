@@ -22,7 +22,6 @@
 }
 
 .my-btn {
-
   --bs-btn-color: #212529;
   --bs-btn-border-color: #4F93D7;
   --bs-btn-hover-color: #fff;
@@ -37,5 +36,5 @@
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #198754;
   --bs-gradient: none;
- 
 }
+
