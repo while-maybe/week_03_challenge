@@ -1,0 +1,20 @@
+:root,
+[data-bs-theme="light"] {
+  /* tertiary background color */
+  --bs-body-bg: #bfdbed;
+
+  --bs-tertiary-bg-rgb: 200, 188, 199;
+  /* --bs-tertiary-bg: #c8bcc7; */
+}
+
+.body {
+  height: 100vh;
+}
+
+.bg-image {
+  background-image: url("../img/beach-pattern.svg");
+}
+
+.navbar {
+  --bs-navbar-nav-link-padding-x: 0.7rem;
+}
