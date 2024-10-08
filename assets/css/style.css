@@ -17,6 +17,12 @@
   background-image: url("../img/beach-pattern.svg");
 }
 
+.bg-hero-image {
+  background-image: url("../img/ai-generated-beach.webp");
+  background-position: center;
+  background-size: cover;
+}
+
 .navbar {
   --bs-navbar-nav-link-padding-x: 0.7rem;
 }
