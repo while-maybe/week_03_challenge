@@ -47,3 +47,6 @@
   --bs-gradient: none;
 }
 
+.time-widget {
+  min-width: 384px;
+}
