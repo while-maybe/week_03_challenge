@@ -149,12 +149,52 @@
           </div>
         </div>
       </div>
-      <section>
-        <div class="mb-5">
-          <h2 class="text-center mb-3">In the news today</h2>
 
+      <section id="news" class="mx-auto">
+        <div class="mb-5">
+          <h2 class="mb-3 text-center">In the news</h2>
+
+          <div id="accordion" class="row">
+            <div class="group">
+              <h3>flip-flops are the new formal wear</h3>
+              <div>
+                <p>Breaking News: Sandy Shores Travel Agency has officially declared that flip-flops are the new formal wear! After extensive research, we’ve found that 9 out of 10 beachgoers prefer a wardrobe that transitions seamlessly from beach towel to beachfront restaurant. We’re still trying to figure out where the other 10% are going in full suits and ties...</p>
+              </div>
+            </div>
+            <div class="group">
+              <h3>Coconut Island</h3>
+              <div>
+                <p>In more groundbreaking news, we’re introducing a new destination: Coconut Island! Perfect for those who want a true tropical experience, this island is so remote, the Wi-Fi password is still ‘12345.’ Warning: coconuts may contain traces of paradise and a surprising lack of responsibility.</p>
+              </div>
+            </div>
+            <div class="group">
+              <h3>Towel Takedown</h3>
+              <div>
+                <p>Our annual “Towel Takedown” contest is back! This year, we’ve upped the ante: if you can stake your claim on a pool chair before 8 AM, you win eternal bragging rights and the envy of all future vacationers. May the best sunbather win—no elbows, please.</p>
+                <!-- <ul>
+                  <li>List item one</li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ul> -->
+              </div>
+            </div>
+            <div class="group">
+              <h3>Work from Beach</h3>
+              <div>
+                <p>Ever dreamt of working remotely from a hammock? Well, your dream might come true if you can type with one hand while balancing a piña colada in the other! Our new "Work from Beach" packages offer premium hammocks, shady palm trees, and the ocean's soothing soundtrack—just don’t blame us when your productivity drops to zero.</p>
+              </div>
+            </div>
+            <div class="group">
+              <h3>Sand Between Your Toes, Not in Your Suitcase</h3>
+              <div>
+                <p>Finally, we’ve launched our latest offer: “Sand Between Your Toes, Not in Your Suitcase.” For a limited time, we’ll provide complimentary sand-proof packing for all travelers. Say goodbye to gritty souvenirs and hello to a cleaner journey home... until you open your suitcase and realize sand is truly eternal.</p>
+              </div>
+            </div>
+          </div>
       </section>
   </main>
+
+
 
   <footer class="mt-auto">
     <div class="bg-body-tertiary bg-opacity-25">
@@ -250,6 +290,26 @@
     });
   </script>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <script>
+    $( function() {
+      $( "#accordion" )
+        .accordion({
+          header: "> div > h3"
+        })
+        .sortable({
+          axis: "y",
+          handle: "h3",
+          stop: function( event, ui ) {
+            // IE doesn't register the blur when sorting
+            // so trigger focusout handlers to remove .ui-state-focus
+            ui.item.children( "h3" ).triggerHandler( "focusout" );
+   
+            // Refresh accordion to handle new order
+            $( this ).accordion( "refresh" );
+          }
+        });
+    } );
+    </script>
 </body>
 
 </html>
